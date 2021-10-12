@@ -26,12 +26,13 @@ const defaults = {defaultFundAmt: '100', defaultWager: '50', standardUnit};
 const randomArrayRef = (arr) =>
   arr[Math.floor(Math.random() * arr.length)];
 
-// const urlArr = ['https://ipfs.io/ipfs/QmZEUm71Fky7G2YANJMVyorxzc3xnJjjWy7xpn9tsbxDSP', //Green
-//           'https://ipfs.io/ipfs/QmahEGV3i9DfNQFcxp4qMFLn67B1k3PymKwjerTZgTJHPf',  //Blue
-//           'https://ipfs.io/ipfs/QmcgUbHBvUdinB1Gh3cypZZ7k2yJs2kSyrZ2fJ1V3Hd2QM',  //Purple
-//           'https://ipfs.io/ipfs/QmbgyFoDhNj9oueZgJLpLqXkBTpsMHaihELvinK1VKfCVq'];
-
 const urlArr = [img1, img2, img3, img4];
+// const urlArr = [
+//   'https://gitee.com/water127/TicTacToe/raw/master/img/1.png',
+//   'https://gitee.com/water127/TicTacToe/raw/master/img/2.png',
+//   'https://gitee.com/water127/TicTacToe/raw/master/img/3.png',
+//   'https://gitee.com/water127/TicTacToe/raw/master/img/4.png'
+// ]
 
 let acc = null;
     
@@ -149,6 +150,5 @@ class Attacher extends Player {
 }
 
 renderDOM(<App />);
-
 
 export default App;
