@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/TicTacToe-Online/static/css/main.f557c6c8.chunk.css",
-    "main.js": "/TicTacToe-Online/static/js/main.8066747f.chunk.js",
-    "main.js.map": "/TicTacToe-Online/static/js/main.8066747f.chunk.js.map",
-    "runtime-main.js": "/TicTacToe-Online/static/js/runtime-main.2f9a47b3.js",
-    "runtime-main.js.map": "/TicTacToe-Online/static/js/runtime-main.2f9a47b3.js.map",
-    "static/js/2.58446a38.chunk.js": "/TicTacToe-Online/static/js/2.58446a38.chunk.js",
-    "static/js/2.58446a38.chunk.js.map": "/TicTacToe-Online/static/js/2.58446a38.chunk.js.map",
-    "static/js/3.d288a4ec.chunk.js": "/TicTacToe-Online/static/js/3.d288a4ec.chunk.js",
-    "static/js/3.d288a4ec.chunk.js.map": "/TicTacToe-Online/static/js/3.d288a4ec.chunk.js.map",
+    "main.css": "/TicTacToe-Online/static/css/main.44f55d1b.chunk.css",
+    "main.js": "/TicTacToe-Online/static/js/main.eb8ca0ca.chunk.js",
+    "main.js.map": "/TicTacToe-Online/static/js/main.eb8ca0ca.chunk.js.map",
+    "runtime-main.js": "/TicTacToe-Online/static/js/runtime-main.a7b1b113.js",
+    "runtime-main.js.map": "/TicTacToe-Online/static/js/runtime-main.a7b1b113.js.map",
+    "static/js/2.6fea92ce.chunk.js": "/TicTacToe-Online/static/js/2.6fea92ce.chunk.js",
+    "static/js/2.6fea92ce.chunk.js.map": "/TicTacToe-Online/static/js/2.6fea92ce.chunk.js.map",
+    "static/js/3.2bad9e55.chunk.js": "/TicTacToe-Online/static/js/3.2bad9e55.chunk.js",
+    "static/js/3.2bad9e55.chunk.js.map": "/TicTacToe-Online/static/js/3.2bad9e55.chunk.js.map",
     "index.html": "/TicTacToe-Online/index.html",
-    "static/css/main.f557c6c8.chunk.css.map": "/TicTacToe-Online/static/css/main.f557c6c8.chunk.css.map",
-    "static/js/2.58446a38.chunk.js.LICENSE.txt": "/TicTacToe-Online/static/js/2.58446a38.chunk.js.LICENSE.txt",
-    "static/media/1.bfdf4d0d.png": "/TicTacToe-Online/static/media/1.bfdf4d0d.png",
-    "static/media/2.35549bd5.png": "/TicTacToe-Online/static/media/2.35549bd5.png",
-    "static/media/3.869aba3c.png": "/TicTacToe-Online/static/media/3.869aba3c.png",
-    "static/media/4.92a49abb.png": "/TicTacToe-Online/static/media/4.92a49abb.png"
+    "static/css/main.44f55d1b.chunk.css.map": "/TicTacToe-Online/static/css/main.44f55d1b.chunk.css.map",
+    "static/js/2.6fea92ce.chunk.js.LICENSE.txt": "/TicTacToe-Online/static/js/2.6fea92ce.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/TicTacToe-Online/static/media/1.bfdf4d0d.png",
+    "static/media/2.png": "/TicTacToe-Online/static/media/2.35549bd5.png",
+    "static/media/3.png": "/TicTacToe-Online/static/media/3.869aba3c.png",
+    "static/media/4.png": "/TicTacToe-Online/static/media/4.92a49abb.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2f9a47b3.js",
-    "static/js/2.58446a38.chunk.js",
-    "static/css/main.f557c6c8.chunk.css",
-    "static/js/main.8066747f.chunk.js"
+    "static/js/runtime-main.a7b1b113.js",
+    "static/js/2.6fea92ce.chunk.js",
+    "static/css/main.44f55d1b.chunk.css",
+    "static/js/main.eb8ca0ca.chunk.js"
   ]
 }
