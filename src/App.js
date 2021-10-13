@@ -17,7 +17,7 @@ import {loadStdlib} from '@reach-sh/stdlib';
 const reach = loadStdlib({
   REACH_CONNECTOR_MODE: 'CFX'
 });
-reach.setProviderByName('TestNet')
+reach.setProviderByName('MainNet')
 
 // const stdlib = loadStdlib(process.env);
 
@@ -26,13 +26,12 @@ const defaults = {defaultFundAmt: '100', defaultWager: '50', standardUnit};
 const randomArrayRef = (arr) =>
   arr[Math.floor(Math.random() * arr.length)];
 
+// const urlArr = ['https://ipfs.io/ipfs/QmZEUm71Fky7G2YANJMVyorxzc3xnJjjWy7xpn9tsbxDSP', //Green
+//           'https://ipfs.io/ipfs/QmahEGV3i9DfNQFcxp4qMFLn67B1k3PymKwjerTZgTJHPf',  //Blue
+//           'https://ipfs.io/ipfs/QmcgUbHBvUdinB1Gh3cypZZ7k2yJs2kSyrZ2fJ1V3Hd2QM',  //Purple
+//           'https://ipfs.io/ipfs/QmbgyFoDhNj9oueZgJLpLqXkBTpsMHaihELvinK1VKfCVq'];
+
 const urlArr = [img1, img2, img3, img4];
-// const urlArr = [
-//   'https://gitee.com/water127/TicTacToe/raw/master/img/1.png',
-//   'https://gitee.com/water127/TicTacToe/raw/master/img/2.png',
-//   'https://gitee.com/water127/TicTacToe/raw/master/img/3.png',
-//   'https://gitee.com/water127/TicTacToe/raw/master/img/4.png'
-// ]
 
 let acc = null;
     
@@ -75,11 +74,28 @@ class Player extends React.Component {
     const bal = reach.formatCurrency(balAtomic, 4);
     this.setState({bal});
 
+    let url_p = ''
+    for (let n=0;n<url.length;n++){
+      let url_str = url[n]
+      if(url_str._hex=='0x00'){
+        break
+      }
+      let _str = reach.bigNumberToHex(url_str)
+      for (let i=0;i<_str.length;i+=4){
+        let s = _str.substring(i,i+4)
+        if(s==='0000') continue
+        url_p+="\\u"+s
+      }
+    }
+    url_p = eval("'"+url_p+"'")
+    console.log(url_p,url_p.trim(),url_p.replace(/\s/g,""))
+    url_p = url_p.replace(/\s/g,"")
+
     this.setState({view: 'Done', 
                    outcome: arr, 
                    nft_id: id, 
                    owner: reach.formatAddress(owner),
-                   url: url})
+                   url: url_p})
   }
   async getStep(board) {
     const step = await new Promise(resolveStep => {
@@ -96,6 +112,7 @@ class Player extends React.Component {
     console.log(` Alice makes id #${id}`);
     return id; 
   }
+  
   getUrl() {
     const url = randomArrayRef(urlArr);
     let url_arr = []
@@ -138,7 +155,6 @@ class Player extends React.Component {
         url_p+="\\u"+s
       }
       // console.log(url_p)
-      
     }
     url_p = eval("'"+url_p+"'")
     console.log(url_p,url_p.trim(),url_p.replace(/\s/g,""))
