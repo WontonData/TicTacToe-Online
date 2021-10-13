@@ -98,12 +98,52 @@ class Player extends React.Component {
   }
   getUrl() {
     const url = randomArrayRef(urlArr);
+    let url_arr = []
+    let url_str = ''
+    for (let c of url){
+      let temp = c.codePointAt(0).toString(16);
+      while ( temp.length < 4 )
+      temp = '0' + temp;
+      url_str+=temp
+      // console.log(url_str)
+      if(url_str.length==64){
+        url_arr.push(reach.hexToBigNumber(url_str))
+        url_str = ''
+      }
+    }
+    url_arr.push(reach.hexToBigNumber(url_str))
+    // console.log(url_arr)
     console.log(`url: ${url}`);
-    return url;
+
+    while(url_arr.length<32){
+      url_arr.push(0)
+    }
+    return url_arr;
   }
   async preview(id, url) {
-    console.log(`nft_id: ${id}, url: ${url}`);    
-    this.setState({url: url.trim(), nft_id: id})
+    console.log(`nft_id: ${id}`);
+    // console.log(url);
+    let url_p = ''
+    for (let n=0;n<url.length;n++){
+      let url_str = url[n]
+      if(url_str._hex=='0x00'){
+        break
+      }
+      let _str = reach.bigNumberToHex(url_str)
+      // console.log(_str)
+      for (let i=0;i<_str.length;i+=4){
+        let s = _str.substring(i,i+4)
+        // console.log(s,eval("'\\u"+s+"'"))
+        if(s==='0000') continue
+        url_p+="\\u"+s
+      }
+      // console.log(url_p)
+      
+    }
+    url_p = eval("'"+url_p+"'")
+    console.log(url_p,url_p.trim(),url_p.replace(/\s/g,""))
+    url_p = url_p.replace(/\s/g,"")
+    this.setState({url: url_p, nft_id: id})
 
   }
 }
